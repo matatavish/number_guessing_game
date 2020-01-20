@@ -3,7 +3,8 @@ import random
 play = True
 
 while play:
-    print(f'\nI am thinking of a number between 1 and 100. You have 5 guesses.')
+    print(f'\nI am thinking of a number between 1 and 100.')
+    print('Can you guess what number I am thinking of in 5 guesses of less?')
 
     secret_number = random.randint(1, 100)
     guesses = 5
