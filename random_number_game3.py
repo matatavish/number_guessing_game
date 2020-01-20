@@ -32,11 +32,16 @@ while play:
     if user_num != secret_number:
         print('You are out of guesses.')
 
+    random_response = ["Invalid response! Enter y or n!", "Are you serious?", "Walk away from the keyboard."]
+    response = 0
     while play_again not in {'y', 'n'}:
         play_again = input(f'\nWould you like to try again? (y)es or (n)o: ')
         play_again = play_again.lower()
         if play_again not in {'y', 'n'}:
-            print(f'\nInvalid! y or n')
+            if response > 2:
+                response = 0
+            print(f'\n{random_response[response]}')
+            response += 1
         elif play_again == 'n':
             print(f'\nHave a nice day!')
             play = False
