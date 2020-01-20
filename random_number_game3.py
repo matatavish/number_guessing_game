@@ -12,7 +12,7 @@ while play:
     play_again = ''
 
     while guesses > 0:
-        print(f'Guesses remaining: {guesses}')
+        print(f'\nGuesses remaining: {guesses}')
         guesses -= 1
         try:
             user_num = int(input(f'\nEnter your guess: '))
@@ -33,7 +33,7 @@ while play:
         print('You are out of guesses.')
 
     while play_again not in {'y', 'n'}:
-        play_again = input(f'\nWould you like to try again? y/n')
+        play_again = input(f'\nWould you like to try again? (y)es or (n)o: ')
         play_again = play_again.lower()
         if play_again not in {'y', 'n'}:
             print(f'\nInvalid! y or n')
